@@ -1,20 +1,30 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# 🎓 EduCore LMS (Learning Management System)
 
-# Run and deploy your AI Studio app
+[![Business Model](https://img.shields.io/badge/Business%20Model-SaaS-00DFA2?style=for-the-badge)](https://en.wikipedia.org/wiki/Software_as_a_service)
+[![Core Tech](https://img.shields.io/badge/Framework-React%2018%20%2B%20TypeScript-blue?style=for-the-badge&logo=react)](https://react.dev/)
+[![Infrastructure](https://img.shields.io/badge/Automation-Push%20Notification%20Sync-FF0060?style=for-the-badge)](https://vitejs.dev/)
+[![Hosting](https://img.shields.io/badge/Deployment-Vercel-000000?style=for-the-badge&logo=vercel)](https://vercel.com/)
 
-This contains everything you need to run your app locally.
+**EduCore** adalah platform *Learning Management System* (LMS) terpadu berbasis *Software as a Service* (SaaS) yang dirancang secara khusus untuk memodernisasi dan mendigitalisasi manajemen akademik di berbagai institusi pendidikan. 
 
-View your app in AI Studio: https://ai.studio/apps/d8cdf445-6bda-4c81-84eb-9accd628bc4c
+Platform ini membawa keunggulan komparatif dengan **menyinkronkan infrastruktur LMS secara langsung ke dalam sistem notifikasi seluler (*push notification*)**. Hal ini memungkinkan otomatisasi pengingat tugas siswa (*automated assignment reminders*) yang dikelola secara penuh melalui model tata kelola menyeluruh (*end-to-end management*), guna menekan angka keterlambatan pengumpulan tugas secara signifikan.
 
-## Run Locally
+---
 
-**Prerequisites:**  Node.js
+## 🏗️ Arsitektur Sistem & Alur Kerja (*End-to-End*)
 
+Sistem otomatisasi *push notification* EduCore bekerja secara berkesinambungan melalui alur infrastruktur berikut:
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```text
+[ Guru / Pengajar ] ──> Input Tugas Baru (Materi & Deadline)
+                              │
+                              ▼
+                     [ Core Engine LMS ] ──> Menyimpan Metadata Tugas
+                              │
+                              ▼ (Sinkronisasi Otomatis)
+               [ Push Notification Router ]
+                              │
+         ┌────────────────────┴────────────────────┐
+         ▼                                         ▼
+[ Notifikasi Web Dashboard ]             [ Notifikasi Seluler Siswa ]
+(Pop-up Alert & Badge UI)               (Reminder H-1 & H-3 Jam via PWA)
