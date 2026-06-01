@@ -1,0 +1,8 @@
+{
+  "name": "EduCore LMS",
+  "description": "An enterprise learning management system for colleges and universities with multi-role simulation dashboards for Admins, Teachers, and Students.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

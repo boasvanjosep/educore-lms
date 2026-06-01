@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-brand-primary: #091426;
+  --color-brand-on-primary: #ffffff;
+  --color-brand-primary-container: #1e293b;
+  --color-brand-on-primary-container: #8590a6;
+  --color-brand-secondary: #565e74;
+  --color-brand-on-secondary: #ffffff;
+  --color-brand-secondary-container: #dae2fd;
+  --color-brand-on-secondary-container: #5c647a;
+  --color-brand-background: #f7f9fb;
+  --color-brand-surface: #ffffff;
+  --color-brand-outline: #e2e8f0;
+  --color-brand-accent-sky: #0ea5e9;
+  --color-brand-accent-emerald: #10b981;
+  --color-brand-card-bg: #ffffff;
+}
+
+body {
+  background-color: var(--color-brand-background);
+  color: #191c1e;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling for a polished, modern developer feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Interactivity aids and button transformations */
+@layer utilities {
+  .btn-base {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    transition: all 0.15s ease-in-out;
+    cursor: pointer;
+  }
+}
